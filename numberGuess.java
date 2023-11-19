@@ -1,10 +1,12 @@
 import java.util.*;
 
 class NumberGuess {
+
     public static void game(int k) {
         Scanner sc = new Scanner(System.in);
         while (true) {
             int n = (int) (Math.random() * 100) + 1;
+
             while (k > 0) {
                 System.out.println("Enter a number: ");
                 int g = sc.nextInt();
@@ -18,15 +20,22 @@ class NumberGuess {
                 }
                 k--;
             }
+
             if (k == 0) {
                 System.out.println("The number was " + n);
             }
+
             System.out.println("Want to play again? Press '+' or any other key to exit.");
             char s = sc.next().charAt(0);
+
             if (s != '+') {
                 break;
             }
+            
         }
+     sc.close();
+
+     
     }
 
     public static void main(String args[]) {
@@ -36,4 +45,5 @@ class NumberGuess {
         game(k);
         sc.close();
     }
+
 }

@@ -33,6 +33,8 @@ public class gradeCalculator {
         int percentage=calculatePercentage(totalMarks);
         System.out.print("The total marks is "+ totalMarks +
                          " \nThe percentage is "+ percentage+"%"+ "\nThe grade is "+grade);
+
+        sc.close();
         
     }
 }
